@@ -7,10 +7,10 @@ const TOKEN = async (body) => {
     var _a, _b;
     try {
         if (body.host == "prod") {
-            _1.config.host == _1.host.prod;
+            _1.config.host = _1.host.prod;
         }
         if (body.host == "staging") {
-            _1.config.host == _1.host.staging;
+            _1.config.host = _1.host.staging;
         }
         _1.config.client_id = body.client_id;
         _1.config.client_secret = body.client_secret;

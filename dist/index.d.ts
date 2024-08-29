@@ -1,6 +1,6 @@
 export declare const host: {
-    prod: string;
-    staging: string;
+    prod: "https://api-wallet.khanbank.com";
+    staging: "https://doob.world:7005";
 };
 export declare const config: {
     client_id: string;

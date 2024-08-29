@@ -1,7 +1,10 @@
 import auth from "./auth";
 import invoice from "./invoice";
 
-export const host = {
+export const host: {
+  prod: "https://api-wallet.khanbank.com";
+  staging: "https://doob.world:7005";
+} = {
   prod: "https://api-wallet.khanbank.com",
   staging: "https://doob.world:7005",
 };

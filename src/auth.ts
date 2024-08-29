@@ -20,10 +20,10 @@ const TOKEN = async (body: {
 }> => {
   try {
     if (body.host == "prod") {
-      config.host == host.prod;
+      config.host = host.prod;
     }
     if (body.host == "staging") {
-      config.host == host.staging;
+      config.host = host.staging;
     }
     config.client_id = body.client_id;
     config.client_secret = body.client_secret;
