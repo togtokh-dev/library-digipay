@@ -4,7 +4,7 @@ exports.invoice = exports.config = exports.host = void 0;
 const auth_1 = require("./auth");
 const invoice_1 = require("./invoice");
 exports.host = {
-    prod: "https://doob.world:7005",
+    prod: "https://api-wallet.khanbank.com",
     staging: "https://doob.world:7005",
 };
 exports.config = {

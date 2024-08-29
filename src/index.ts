@@ -2,7 +2,7 @@ import auth from "./auth";
 import invoice from "./invoice";
 
 export const host = {
-  prod: "https://doob.world:7005",
+  prod: "https://api-wallet.khanbank.com",
   staging: "https://doob.world:7005",
 };
 
@@ -12,7 +12,7 @@ export const config: {
   merchantId: string;
   merchantName: string;
   terminalId: string;
-  host: "https://doob.world:7005" | "https://doob.world:7005";
+  host: "https://doob.world:7005" | "https://api-wallet.khanbank.com";
   token: string;
 } = {
   client_id: "",

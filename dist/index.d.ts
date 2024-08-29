@@ -8,7 +8,7 @@ export declare const config: {
     merchantId: string;
     merchantName: string;
     terminalId: string;
-    host: "https://doob.world:7005" | "https://doob.world:7005";
+    host: "https://doob.world:7005" | "https://api-wallet.khanbank.com";
     token: string;
 };
 declare const _default: {
