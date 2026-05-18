@@ -5,7 +5,8 @@
     "sourceMap": false,
     "outDir": "./dist",
     "noImplicitAny": true,
-    "declaration": true
+    "declaration": true,
+    "types": ["node"]
   },
   "include": [
     "src/**/*",

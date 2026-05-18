@@ -1,3 +1,6 @@
+import { AxiosMasterError, AxiosMasterLoggerType } from "axios-master";
+export declare function parseErr(error: unknown | AxiosMasterError): string;
+export declare const logAxios: (enabled: boolean, name: string) => (data: AxiosMasterLoggerType) => void;
 export declare const host: {
     prod: "https://api-wallet.khanbank.com";
     staging: "https://doob.world:7005";
@@ -10,6 +13,7 @@ export declare const config: {
     terminalId: string;
     host: "https://doob.world:7005" | "https://api-wallet.khanbank.com";
     token: string;
+    logger: boolean;
 };
 declare const _default: {
     auth: {
@@ -53,6 +57,23 @@ declare const _default: {
                 redirectUrl: string;
                 extInvoiceId: string;
                 userId: string;
+                refundedAmount: number;
+                voidAmount: number;
+            };
+        }>;
+        VOID: (invoiceId: string) => Promise<{
+            success: boolean;
+            message: string;
+            data?: {
+                amount: number;
+                merchantId: string;
+                merchantName: string;
+                terminalId: string;
+                webHookUrl: string;
+                invoiceId: string;
+                txnId: number;
+                status: "ERROR" | "NEW" | "SUCCESS";
+                extInvoiceId: string;
                 refundedAmount: number;
                 voidAmount: number;
             };
