@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.invoice = exports.config = exports.host = exports.logAxios = exports.parseErr = void 0;
+exports.invoice = exports.config = exports.host = exports.logAxios = void 0;
+exports.parseErr = parseErr;
 const auth_1 = require("./auth");
 const invoice_1 = require("./invoice");
 function parseErr(error) {
@@ -34,7 +35,6 @@ function parseErr(error) {
     }
     return "Unexpected error";
 }
-exports.parseErr = parseErr;
 const logAxios = (enabled, name) => (data) => {
     var _a, _b, _c, _d, _e, _f;
     if (!enabled)

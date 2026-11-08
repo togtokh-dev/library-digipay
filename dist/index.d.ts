@@ -51,14 +51,14 @@ declare const _default: {
                 terminalId: string;
                 webHookUrl: string;
                 invoiceId: string;
-                txnId: string;
-                status: "ERROR" | "NEW" | "SUCCESS";
-                errorMessage: string;
-                redirectUrl: string;
-                extInvoiceId: string;
+                txnId: null | string;
+                status: "NEW" | "SUCCESS" | "ERROR";
+                errorMessage: null | string;
+                redirectUrl: null | string;
+                extInvoiceId: null | string;
                 userId: string;
-                refundedAmount: number;
-                voidAmount: number;
+                refundedAmount: null | number;
+                voidAmount: null | number;
             };
         }>;
         VOID: (invoiceId: string) => Promise<{
@@ -71,11 +71,11 @@ declare const _default: {
                 terminalId: string;
                 webHookUrl: string;
                 invoiceId: string;
-                txnId: number;
-                status: "ERROR" | "NEW" | "SUCCESS";
-                extInvoiceId: string;
-                refundedAmount: number;
-                voidAmount: number;
+                txnId: number | null;
+                status: "NEW" | "SUCCESS" | "ERROR";
+                extInvoiceId: string | null;
+                refundedAmount: number | null;
+                voidAmount: number | null;
             };
         }>;
     };
